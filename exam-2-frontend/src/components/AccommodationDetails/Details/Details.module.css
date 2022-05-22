@@ -1,0 +1,33 @@
+.container {
+  padding: 20px 10px 0px 10px;
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
+.h1 {
+  margin: 100px 0px 0px 0px;
+  font-weight: lighter;
+  font-size: 42px;
+}
+
+.address {
+  color: var(--secondary-colour);
+  margin: 5px 0px 20px 0px;
+}
+
+.imagesAndDescriptionContainer {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+  .imagesAndDescriptionContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .descriptionContainer {
+    max-width: 100%;
+  }
+
+}

@@ -1,0 +1,82 @@
+.inboxLink {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.inboxLink:hover {
+    text-decoration: underline;
+}
+
+
+.inboxLink p {
+    margin: 0px;
+    color: var(--secondary-colour);
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.inboxIcon {
+    color: var(--secondary-colour)
+}
+
+.inboxContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.685);
+    height: 100vh;
+    margin-top: 14px;
+}
+
+.inbox {
+    border: 1px solid;
+    padding: 30px 0px 60px 0px;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    margin: 150px auto 0px auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: #ffff;
+    max-width: 700px;
+    max-height: 600px;
+}
+
+.inboxHeader {
+    text-align: center;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 0px;
+}
+
+.inboxButtonsContainer {
+    display: flex;
+    gap: 10px;
+    margin: 0px;
+    padding: 0px 60px 0px 60px;
+}
+
+.enquirysButton {
+    margin: 0px;
+}
+
+.contactButton {
+    margin: 0px;
+}
+
+.inboxBody {
+    padding: 5px 5px 20px 5px;
+    border: 1px solid gray;
+    overflow: scroll;
+    overflow-x: hidden;
+    max-width: 580px;
+    margin: 0 auto;
+    max-height: 400px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

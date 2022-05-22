@@ -1,0 +1,44 @@
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdownButton p {
+  margin: 0px;
+  color: var(--secondary-colour);
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.dropDownIcon {
+  color: var(--secondary-colour)
+}
+
+.dropDownMenu {
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.menuItems {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin: 10px 0px 10px 0px;
+  padding: 0px 15px 0px 15px;
+}
+
+.menuItems p {
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

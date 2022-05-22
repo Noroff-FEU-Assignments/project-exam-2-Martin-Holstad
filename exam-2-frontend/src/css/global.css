@@ -1,0 +1,28 @@
+:root {
+
+    /*Colour variables*/
+    --primary-colour: #279FE8;
+    --secondary-colour: #707070;
+    --description-text-colour: #707070;
+    --icon-colour: #707070;
+    --rating-colour: #736151;
+    --stars-rating-colour: #FFCC00;
+
+    /*Typography variables*/
+    --primary-font: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0px;
+    font-family: var(--primary-font);
+}
+
+
+.react-datepicker__input-container input {
+    width: 95%;
+    height: 40px;
+    outline: none;
+    padding-left: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}

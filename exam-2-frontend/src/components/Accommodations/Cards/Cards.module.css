@@ -1,0 +1,87 @@
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.cardsContainer a {
+  text-decoration: none;
+}
+
+.card {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+
+.cardImg {
+  width: 100%;
+}
+
+.cardBody {
+  padding: 10px;
+}
+
+.cardName {
+  color: black;
+  font-weight: lighter;
+  font-size: 24px;
+  margin: 0px 0px 10px 0px;
+}
+
+.cardRatingContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardRating {
+  background-color: var(--rating-colour);
+  width: 35px;
+  padding: 1px;
+  text-align: center;
+  color: #fff;
+}
+
+.cardDescription {
+  color: var(--description-text-colour);
+  height: 61px;
+  overflow: hidden;
+}
+
+.cardPrice {
+  margin-bottom: 0px;
+  color: black;
+}
+
+.filterNameConatiner label {
+  display: block;
+}
+
+.filterNameConatiner input {
+  height: 30px;
+}
+
+@media only screen and (max-width: 1040px) {
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .cardsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+}

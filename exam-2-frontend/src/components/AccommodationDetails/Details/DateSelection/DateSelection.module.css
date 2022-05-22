@@ -1,0 +1,48 @@
+.container {
+  max-width: 1030px;
+  margin: 0 auto;
+  margin-top: 50px
+}
+
+.datePickerHeader {
+  font-size: 25px;
+  font-weight: lighter;
+  margin: 0px 0px 20px 0px;
+}
+
+.datePickerLabel {
+  font-size: 14px;
+}
+
+.guestsContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.plusAndMinusContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.minusButton {
+  color: var(--secondary-colour);
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.plusButton {
+  color: var(--secondary-colour);
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+
+.datePickerPrice {
+  font-weight: bold;
+  margin: 15px 0px 20px 0px;
+}

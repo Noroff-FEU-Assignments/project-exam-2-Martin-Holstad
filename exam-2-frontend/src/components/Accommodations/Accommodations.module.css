@@ -1,0 +1,10 @@
+.accommodationsContainer {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.accommodationsHeader {
+  font-weight: lighter;
+  white-space: wrap;
+}

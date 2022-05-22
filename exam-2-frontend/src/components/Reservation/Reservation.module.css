@@ -1,0 +1,47 @@
+.main {
+    padding: 100px 10px 10px 10px;
+    max-width: 1030px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--primary-colour);
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+.logo a {
+    color: var(--primary-colour);
+    text-decoration: none;
+}
+
+.h1 {
+    font-weight: lighter;
+    font-size: 42px;
+    margin-bottom: 0px;
+}
+
+.h1Hr {
+    margin-bottom: 80px;
+}
+
+.gridContainer {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .gridContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .gridOrder {
+        order: 1
+    }
+
+}

@@ -1,0 +1,60 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #ffff;
+  height: 50px;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  color: var(--primary-colour);
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 4px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.logo a {
+  color: var(--primary-colour);
+  text-decoration: none;
+}
+
+
+.nav ul {
+  padding: 0px 50px 0px 0px;
+  display: flex;
+  gap: 15px;
+}
+
+ul a {
+  color: var(--secondary-colour);
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.contactButton {
+  margin: 0px;
+  color: var(--secondary-colour);
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.contactButton:hover {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

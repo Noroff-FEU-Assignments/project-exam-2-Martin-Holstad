@@ -1,0 +1,24 @@
+.message {
+  padding: 15px;
+  text-align: center;
+}
+
+.error {
+  border-color: red;
+  color: white;
+  background: red;
+  border-radius: 7px;
+}
+
+.warning {
+  color: white;
+  background: orange;
+  border-radius: 7px;
+}
+
+.success {
+  border-color: green;
+  color: white;
+  background: green;
+  border-radius: 7px;
+}
