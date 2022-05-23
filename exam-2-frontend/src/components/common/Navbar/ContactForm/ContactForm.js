@@ -26,6 +26,8 @@ export default function ContactForm() {
 
     async function onSubmit(data) {
 
+        setBtnLoader(true)
+
         const url = baseUrl + "/api/contact-messages"
 
         const options = {
@@ -39,8 +41,6 @@ export default function ContactForm() {
         try {
 
             const response = await fetch(url, options)
-
-            setBtnLoader(true)
 
             if (response.ok) {
                 setMessage(<DisplayMessage messageType="success" >Message sendt</DisplayMessage>)

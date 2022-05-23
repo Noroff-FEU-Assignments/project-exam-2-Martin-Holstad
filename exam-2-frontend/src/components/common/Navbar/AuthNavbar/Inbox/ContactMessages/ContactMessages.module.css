@@ -1,0 +1,101 @@
+.ul {
+    padding: 15px 20px 15px 20px !important;
+    margin-bottom: 5px;
+    display: block !important;
+    border: 1px solid gray;
+    cursor: pointer;
+
+}
+
+.li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    pointer-events: none;
+}
+
+.fromName {
+    color: var(--secondary-colour);
+    margin-left: 5px;
+}
+
+.subjectText {
+    color: var(--secondary-colour);
+    margin-left: 5px;
+}
+
+.date {
+    text-align: end;
+}
+
+.contactMessageContainer {
+    height: 600px;
+}
+
+.contactMessageGoBackButton {
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0px 0px 0px 10px;
+    padding: 7px 0px 0px 0px;
+}
+
+.contactMessageBody {
+    padding: 0px 10px 0px 10px;
+}
+
+.contactMessageFromAndDateContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactMessageFrom {
+    color: var(--secondary-colour);
+}
+
+.contactMessageFrom span {
+    font-weight: bold;
+    color: black;
+}
+
+.contactMessageDateAndMenuIconContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.contactMessageMenuIcon {
+    margin: 14px 10px 0px 0px;
+    font-size: 25px;
+}
+
+.contactMessageSubject {
+    margin: 0px 0px 40px 0px;
+    color: var(--secondary-colour)
+}
+
+.contactMessageSubject span {
+    font-weight: bold;
+    color: black;
+}
+
+.contacMessageMessage {
+    color: var(--secondary-colour);
+    overflow-wrap: break-word;
+}
+
+.contactMessageEmail {
+    color: var(--secondary-colour);
+    margin-top: 40px;
+}
+
+.contactMessageEmail span {
+    font-weight: bold;
+    color: black;
+}
+
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none !important;
+}

@@ -30,6 +30,8 @@ export default function ReservationForm({ accommodation }) {
 
     async function onSubmit(data) {
 
+        setBtnLoader(true)
+
         const url = baseUrl + "/api/enquiries"
 
         const options = {
@@ -43,8 +45,6 @@ export default function ReservationForm({ accommodation }) {
         try {
 
             const response = await fetch(url, options)
-
-            setBtnLoader(true)
 
             if (response.ok) {
                 setMessage(<DisplayMessage messageType="success" >Reservation request sendt</DisplayMessage>)

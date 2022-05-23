@@ -2,7 +2,7 @@ import styles from "./Inbox.module.css"
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import ContactMessages from "./ContactMessages";
+import ContactMessages from "./ContactMessages/ContactMessages";
 
 export default function Inbox() {
 
@@ -26,7 +26,6 @@ export default function Inbox() {
             <div className={`${styles.inboxContainer} ${!inboxVisual ? styles.hide : styles.show}`}>
                 <div className={styles.inbox}>
                     <p className={styles.inboxHeader}>Your Inbox</p>
-                    <hr />
                     <div className={styles.inboxButtonsContainer}>
                         <p className={styles.enquirysButton}>Enquirys </p>
                         <p className={styles.contactButton}>Contact</p>

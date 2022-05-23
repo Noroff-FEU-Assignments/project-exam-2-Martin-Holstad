@@ -31,6 +31,8 @@ export default function LoginForm() {
 
     async function onSubmit(data) {
 
+        setBtnLoader(true)
+
         const url = baseUrl + "/api/auth/local"
 
         const options = {
@@ -45,8 +47,6 @@ export default function LoginForm() {
 
             const response = await fetch(url, options)
             const json = await response.json()
-
-            setBtnLoader(true)
 
             if (json.jwt) {
                 setAuth(json.jwt)
