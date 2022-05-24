@@ -1,10 +1,20 @@
-.ul {
+.ulContainer {
     padding: 15px 20px 15px 20px !important;
     margin-bottom: 5px;
     display: block !important;
     border: 1px solid gray;
     cursor: pointer;
+    margin: 5px 5px 0px 5px;
+}
 
+.newMessageulContainer {
+    padding: 15px 20px 15px 20px !important;
+    margin-bottom: 5px;
+    display: block !important;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 5px 5px 5px 5px;
+    background: linear-gradient(90deg, var(--primary-colour) 2%, #ffff 2%);
 }
 
 .li {
@@ -13,80 +23,76 @@
     pointer-events: none;
 }
 
-.fromName {
+.from span {
     color: var(--secondary-colour);
     margin-left: 5px;
 }
 
-.subjectText {
+.subject span {
     color: var(--secondary-colour);
     margin-left: 5px;
 }
+
 
 .date {
     text-align: end;
 }
 
-.contactMessageContainer {
+.messageContainer {
     height: 600px;
 }
 
-.contactMessageGoBackButton {
+.messageGoBackButton {
     font-size: 25px;
     cursor: pointer;
     margin: 0px 0px 0px 10px;
     padding: 7px 0px 0px 0px;
 }
 
-.contactMessageBody {
+.messageBody {
     padding: 0px 10px 0px 10px;
 }
 
-.contactMessageFromAndDateContainer {
+.messageFromAndDateContainer {
     display: flex;
     justify-content: space-between;
 }
 
-.contactMessageFrom {
+.messageFrom {
     color: var(--secondary-colour);
 }
 
-.contactMessageFrom span {
+.messageFrom span {
     font-weight: bold;
     color: black;
 }
 
-.contactMessageDateAndMenuIconContainer {
+.messageDateAndMenuIconContainer {
     display: flex;
     gap: 20px;
 }
 
-.contactMessageMenuIcon {
-    margin: 14px 10px 0px 0px;
-    font-size: 25px;
-}
-
-.contactMessageSubject {
+.messageSubject {
     margin: 0px 0px 40px 0px;
     color: var(--secondary-colour)
 }
 
-.contactMessageSubject span {
+.messageSubject span {
     font-weight: bold;
     color: black;
 }
 
-.contacMessageMessage {
+.messageMessage {
     color: var(--secondary-colour);
     overflow-wrap: break-word;
 }
 
-.contactMessageEmail {
+.messageEmail {
     color: var(--secondary-colour);
     margin-top: 40px;
 }
 
-.contactMessageEmail span {
+.messageEmail span {
     font-weight: bold;
     color: black;
 }

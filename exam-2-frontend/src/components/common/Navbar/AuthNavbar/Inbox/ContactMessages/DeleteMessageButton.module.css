@@ -1,0 +1,6 @@
+.deleteButton {
+    color: var(--secondary-colour);
+    margin: 18px 10px 0px 0px;
+    color: black;
+    cursor: pointer;
+}
