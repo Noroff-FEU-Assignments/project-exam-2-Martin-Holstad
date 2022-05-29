@@ -3,6 +3,13 @@
   text-align: center;
 }
 
+.normal {
+  border-color: #fff;
+  color: var(--secondary-colour);
+  background: #fff;
+  border-radius: 7px;
+}
+
 .error {
   border-color: red;
   color: white;

@@ -7,7 +7,14 @@
     margin: 5px 5px 0px 5px;
 }
 
-.newMessageulContainer {
+.loaderContainer {
+    display: grid;
+    justify-content: center;
+    padding: 170px;
+}
+
+
+.newMessageUlContainer {
     padding: 15px 20px 15px 20px !important;
     margin-bottom: 5px;
     display: block !important;
@@ -33,7 +40,6 @@
     margin-left: 5px;
 }
 
-
 .date {
     text-align: end;
 }
@@ -53,21 +59,21 @@
     padding: 0px 10px 0px 10px;
 }
 
-.messageFromAndDateContainer {
+.messageNameAndDateContainer {
     display: flex;
     justify-content: space-between;
 }
 
-.messageFrom {
+.messageName {
     color: var(--secondary-colour);
 }
 
-.messageFrom span {
+.messageName span {
     font-weight: bold;
     color: black;
 }
 
-.messageDateAndMenuIconContainer {
+.messageDateAndDeleteIconContainer {
     display: flex;
     gap: 20px;
 }
@@ -85,6 +91,7 @@
 .messageMessage {
     color: var(--secondary-colour);
     overflow-wrap: break-word;
+    color: black;
 }
 
 .messageEmail {
@@ -97,11 +104,21 @@
     color: black;
 }
 
-
 .show {
     display: block;
 }
 
 .hide {
     display: none !important;
+}
+
+@media only screen and (max-width: 570px) {
+
+    .li {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .subject {
+        display: none;
+    }
 }

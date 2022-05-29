@@ -1,0 +1,159 @@
+.main {
+    padding-top: 100px;
+}
+
+.loaderContainer {
+    display: grid;
+    justify-content: center;
+    padding: 300px;
+}
+
+
+.form {
+    max-width: 1030px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 0px 10px 0px 10px;
+}
+
+.h1 {
+    font-size: 50px;
+    font-weight: lighter;
+    margin: 0px;
+}
+
+.hr {
+    margin: 0px 0px 10px 0px;
+}
+
+.form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    outline: none;
+    margin-top: 5px;
+    text-indent: 5px;
+}
+
+form select {
+    display: block;
+    width: 100%;
+    height: 32px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    outline: none;
+    margin-top: 5px;
+    text-indent: 5px;
+}
+
+form textarea {
+    display: block;
+    width: 100%;
+    height: 200px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    outline: none;
+    margin-top: 5px;
+    text-indent: 5px;
+}
+
+.errors {
+    color: red;
+}
+
+.steponeHeaderContainer {
+    background-color: #707070;
+    padding: 10px 0px 10px 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.steponeHeaderContainer p {
+    margin: 0px;
+    color: #fff;
+}
+
+.steponeInputContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px
+}
+
+.stepTwoHeaderContainer {
+    background-color: #707070;
+    padding: 10px 0px 10px 10px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.stepTwoHeaderContainer p {
+    margin: 0px;
+    color: #fff;
+}
+
+.stepTwoInputContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px
+}
+
+
+.stepThreeHeaderContainer {
+    background-color: #707070;
+    padding: 10px 0px 10px 10px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.stepThreeInputContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px
+}
+
+.stepThreeHeaderContainer p {
+    margin: 0px;
+    color: #fff;
+}
+
+.mainImageInput,
+.subImagesInput {
+    text-indent: 0px;
+}
+
+.mainImageInput[type=file]::file-selector-button,
+.subImagesInput[type=file]::file-selector-button {
+    height: 30px;
+    width: 100px;
+    border-radius: 7px;
+    border: none;
+}
+
+
+.form button {
+    background-color: var(--primary-colour);
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .h1 {
+        font-size: 30px;
+    }
+
+    .steponeInputContainer,
+    .stepTwoInputContainer,
+    .stepThreeInputContainer {
+        grid-template-columns: 1fr;
+        gap: 0px
+    }
+
+}

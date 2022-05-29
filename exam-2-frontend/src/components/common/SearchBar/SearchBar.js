@@ -1,6 +1,6 @@
 import { baseUrl } from "../../../settings/BaseUrl";
 import { useState, useEffect } from "react";
-import { SearchBarUI } from "./SearchBarUI/SearchBarUI";
+import { SearchBarUI } from "./SearchBarUI";
 
 export default function SearchBar() {
 

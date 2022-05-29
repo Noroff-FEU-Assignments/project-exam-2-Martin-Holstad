@@ -1,10 +1,10 @@
 import styles from "./Reservation.module.css"
 import { baseUrl } from "../../settings/BaseUrl";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import Description from "./Description/Description";
-import ReservationForm from "./ReservationForm/ReservationForm";
-import DatesAndGuests from "./DatesAndGuests/DatesAndGuests";
+import { useParams, Link } from "react-router-dom";
+import Description from "./Description";
+import ReservationForm from "./ReservationForm";
+import DatesAndGuests from "./DatesAndGuests";
 
 export default function Reservation() {
 
@@ -46,10 +46,11 @@ export default function Reservation() {
         return <div>An error occured: {error}</div>;
     }
 
-
     return (
         <main className={styles.main}>
-            <p className={styles.logo}>Holidaze</p>
+            <Link to="/">
+                <p className={styles.logo}>Holidaze</p>
+            </Link>
             <h1 className={styles.h1}>Staying information</h1>
             <hr className={styles.h1Hr} />
             <div className={styles.gridContainer}>

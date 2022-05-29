@@ -1,0 +1,10 @@
+.typeOfStayingHeader {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.typeOfStayingSelect {
+    height: 30px;
+    outline: none;
+    width: 100%;
+}

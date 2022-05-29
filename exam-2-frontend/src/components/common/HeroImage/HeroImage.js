@@ -19,7 +19,6 @@ export function HeroImage() {
 
                 setImage(json.data.attributes.banner.data.attributes.url)
                 setAlternativeText(json.data.attributes.banner.data.attributes.alternativeText)
-
             } catch (error) {
                 console.log(error);
             }
@@ -30,8 +29,11 @@ export function HeroImage() {
 
     return (
         <div className={styles.heroImageContainer}>
-            <div className={styles.heroImage} style={{ backgroundImage: `url(${baseUrl + image})` }} alt={alternativeText}>
+            <div className={styles.heroImage} style={{ backgroundImage: `url(${image})` }} alt={alternativeText}>
                 <SearchBar />
+
+            </div>
+            <div>
             </div>
         </div>
     )

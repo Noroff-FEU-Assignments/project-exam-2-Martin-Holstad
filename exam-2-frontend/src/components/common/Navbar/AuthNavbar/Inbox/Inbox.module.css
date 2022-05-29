@@ -1,25 +1,3 @@
-.inboxLink {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.inboxLink:hover {
-    text-decoration: underline;
-}
-
-
-.inboxLink p {
-    margin: 0px;
-    color: var(--secondary-colour);
-    font-weight: lighter;
-    cursor: pointer;
-}
-
-.inboxIcon {
-    color: var(--secondary-colour)
-}
-
 .inboxContainer {
     position: absolute;
     left: 0;
@@ -28,6 +6,22 @@
     height: 100vh;
     margin-top: 14px;
     padding: 0px 10px 0px 10px;
+    overflow: scroll;
+    width: 100%;
+}
+
+.closeInboxButtonContainer {
+    color: #fff;
+    font-size: 40px;
+    background-color: var(--primary-colour);
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.closeInboxButton {
+    cursor: pointer;
 }
 
 .inbox {
@@ -35,21 +29,25 @@
     padding: 0px 0px 60px 0px;
     border-radius: 20px;
     border: 1px solid lightgray;
-    margin: 150px auto 0px auto;
+    margin: 0px auto 0px auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: #ffff;
-    max-width: 700px;
+    width: 700px;
     height: 600px;
     overflow: hidden;
     border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
 }
 
 .inboxHeader {
     text-align: center;
     font-size: 40px;
     font-weight: lighter;
-    margin: 0px 0px 7px 0px;
-    padding: 30px 0px 30px 0px;
+    margin: -30px 0px 7px 0px;
+    padding: 0px 0px 20px 0px;
     background-color: var(--primary-colour);
     color: #fff;
 }
@@ -61,27 +59,12 @@
     padding: 0px 60px 0px 60px;
 }
 
-.enquirysButton {
-    margin: 0px;
-    cursor: pointer;
+.bodyHeader {
+    max-width: 580px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 16px;
 }
-
-.enquirysButton:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-
-.contactButton {
-    margin: 0px;
-    cursor: pointer;
-}
-
-.contactButton:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
 
 .inboxBody {
     padding: 5 0px 5px 20px 0px;
@@ -89,10 +72,10 @@
     overflow: scroll;
     overflow-x: hidden;
     max-width: 580px;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 10px;
     max-height: 400px;
     height: 600px;
+    margin: 0 auto;
 }
 
 .hide {
@@ -101,4 +84,29 @@
 
 .show {
     display: block;
+}
+
+@media only screen and (max-width: 660px) {
+
+    .inboxButtonsContainer {
+        padding: 0px 0px 0px 20px;
+    }
+
+    .inbox {
+        width: 97%;
+    }
+
+    .inboxBody {
+        margin: 20px 20px;
+    }
+
+    .bodyHeader {
+        margin-left: 20px
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .form {
+        width: 100px;
+    }
 }

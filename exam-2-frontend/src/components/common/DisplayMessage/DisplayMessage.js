@@ -5,7 +5,9 @@ export default function DisplayMessage(props) {
 
   let messageType = ""
 
-  if (props.messageType === "error") {
+  if (props.messageType === "normal") {
+    messageType = styles.normal
+  } else if (props.messageType === "error") {
     messageType = styles.error
   } else if (props.messageType === "warning") {
     messageType = styles.warning
@@ -19,6 +21,6 @@ export default function DisplayMessage(props) {
 }
 
 DisplayMessage.propTypes = {
-  messageType: PropTypes.oneOf(['error', 'warning', 'success']),
+  messageType: PropTypes.oneOf([`normal`, 'error', 'warning', 'success']),
   children: PropTypes.node.isRequired,
 };

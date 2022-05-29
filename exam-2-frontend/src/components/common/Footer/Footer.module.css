@@ -1,0 +1,54 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    margin-top: 300px;
+    padding: 0px 20px 0px 50px;
+}
+
+.footerLogo p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.aboutLink a {
+    color: black !important;
+}
+
+.footerLogo a {
+    color: black
+}
+
+.emailContainer {
+    margin-top: 15px;
+}
+
+.emailContainer p {
+    margin: 5px 0px 0px 0px;
+}
+
+.aboutAndContatContainer {
+    margin-top: 15px;
+}
+
+.aboutAndContatContainer p {
+    margin: 5px 0px 0px 0px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 490px) {
+    .footer {
+        display: block;
+        text-align: center;
+        padding: 30px 0px 30px 0px;
+    }
+
+    .emailContainer {
+        margin-top: 30px;
+    }
+
+    .aboutAndContatContainer {
+        margin-top: 30px;
+    }
+}

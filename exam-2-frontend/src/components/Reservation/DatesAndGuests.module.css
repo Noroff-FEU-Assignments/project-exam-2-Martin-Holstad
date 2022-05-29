@@ -1,0 +1,30 @@
+.datesAndGuestsHeader {
+  font-size: 25px;
+  margin: 0px;
+}
+
+.datesParagraphHeader {
+  margin: 30px 0px 0px 0px;
+}
+
+.datesParagraph {
+  font-size: 14px;
+  color: var(--secondary-colour);
+  margin: 10px 0px 5px 0px;
+}
+
+.guestsParagraphHeader {
+  margin: 40px 0px 0px 0px;
+}
+
+.guestsParagraph {
+  font-size: 14px;
+  color: var(--secondary-colour);
+  margin-top: 5px;
+}
+
+
+.totalPrice {
+  font-weight: bold;
+  margin-top: 30px;
+}

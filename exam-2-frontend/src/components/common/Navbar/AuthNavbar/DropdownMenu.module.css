@@ -12,23 +12,49 @@
 }
 
 .dropDownIcon {
-  color: var(--secondary-colour)
+  color: var(--secondary-colour);
+  cursor: pointer;
 }
 
 .dropDownMenu {
   background-color: #fff;
   position: absolute;
   top: 50px;
+  min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .menuItems {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   cursor: pointer;
-  margin: 10px 0px 10px 0px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 10px 0px 10px;
+  height: 40px;
+}
+
+.menuItems:hover {
+  background-color: lightgray;
+}
+
+
+.menuLink {
+  color: black;
+  display: flex;
+  gap: 5px;
+}
+
+.menuLink:hover {
+  text-decoration: none;
+}
+
+.menuIcons {
+  padding-top: 2px;
+}
+
+
+.hr {
+  margin: 0px;
 }
 
 .menuItems p {

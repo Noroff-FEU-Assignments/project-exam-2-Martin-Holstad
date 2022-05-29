@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.background {
+  height: 90px;
+  padding: 20px 20px 20px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  backdrop-filter: brightness(60%);
+}
+
+.header {
+  color: #fff;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.inputAndButtonContainer {
+  display: flex;
+  gap: 5px;
+  position: relative;
+}
+
+.searchInput {
+  height: 35px;
+  width: 400px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  text-indent: 10px;
+  padding: 0px;
+}
+
+.ul {
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  max-height: 330px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: -2px 0px 0px 0px;
+  padding: 0px;
+}
+
+.li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.li a {
+  color: black;
+  text-decoration: none !important;
+  font-weight: normal;
+}
+
+.dropdownMenuBody {
+  padding: 5px 0px 5px 5px;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+}
+
+.imageContainer {
+  max-width: 80px;
+  margin-right: 10px;
+}
+
+.imageContainer img {
+  width: 100%;
+}
+
+.dropdownName {
+  margin: 0px;
+}
+
+.dropdownAddress {
+  margin: 0px 0px 6px 0px;
+  font-size: 12px;
+  color: var(--secondary-colour);
+}
+
+.clearButton {
+  background-color: var(--primary-colour);
+  color: #ffff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 7px 20px 10px 20px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 540px) {
+
+  .background {
+    height: 100%;
+  }
+
+  .inputAndButtonContainer {
+    display: block;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .clearButton {
+    display: none;
+  }
+
+}

@@ -18,6 +18,7 @@ export default function ReserveButton({ accommodation, guestsAmount, total, star
             setCheckinDate(startDate)
             setCheckOutDate(endDate)
         }
+
     }
 
     return (

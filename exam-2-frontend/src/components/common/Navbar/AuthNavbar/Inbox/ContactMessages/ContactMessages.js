@@ -8,11 +8,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleLeft, } from "@fortawesome/free-solid-svg-icons"
 import MarkAsRead from "./MarkAsRead";
 import DeleteMessageButton from "./DeleteMessageButton";
+import DisplayMessage from "../../../../../common/DisplayMessage/DisplayMessage"
+import ComponentLoader from "../../../../Loaders/ComponentLoader";
 
-export default function ContactMessages() {
+export default function ContactMessages({ setUpdateApi }) {
 
-    const [auth, setAuth] = useLocalStorage("jwt", null)
+    const [auth, setAuth] = useLocalStorage("jwt", null);
     const [contactMessages, setContactMessages] = useState([]);
+    const [displayMessage, setDisplayMessage] = useState(null);
+    const [loading, setLoading] = useState(false);
     const [messageContainerOpen, setMessageContainerOpen] = useState(false);
     const [id, setId] = useState("");
     const [name, setName] = useState("");
@@ -20,10 +24,14 @@ export default function ContactMessages() {
     const [message, setMessage] = useState("");
     const [created, setCreated] = useState("");
     const [subject, setSubject] = useState("");
+    const [update, setUpdate] = useState(false);
 
     useEffect(function () {
 
         async function fetchContactMessages() {
+
+            setUpdateApi(update)
+            setLoading(true)
 
             const options = {
                 method: "GET",
@@ -40,15 +48,28 @@ export default function ContactMessages() {
                 if (response.ok) {
                     const json = await response.json()
                     setContactMessages(_.reverse(json.data))
+                    setDisplayMessage(json.data.length === 0 ? <DisplayMessage messageType="normal" >No messages to show</DisplayMessage> : null)
+                }
+
+                if (!response.ok) {
+                    setDisplayMessage(<DisplayMessage messageType="error" >Oops! something went wrong</DisplayMessage>)
                 }
 
             } catch (error) {
                 console.log(error);
+                setDisplayMessage(<DisplayMessage messageType="error" >Oops! something went wrong</DisplayMessage>)
+            } finally {
+                setUpdate(false)
+                setLoading(false)
             }
         }
         fetchContactMessages()
 
-    }, [contactMessages])
+    }, [update])
+
+    if (loading) {
+        return <div className={styles.loaderContainer}><ComponentLoader /></div>
+    }
 
     function onListClick(event) {
         setId(event.target.dataset.id)
@@ -59,15 +80,18 @@ export default function ContactMessages() {
         setCreated(event.target.dataset.created)
         MarkAsRead(event.target.dataset.id, auth)
         setMessageContainerOpen(true)
-
+        setUpdate(true)
     }
 
     function toggleMessageContainerVisual() {
         setMessageContainerOpen(false)
+        setUpdate(true)
     }
 
     return (
         <>
+            <div>{displayMessage}</div>
+
             {contactMessages.map(function (messages) {
 
                 return (
@@ -84,11 +108,11 @@ export default function ContactMessages() {
                 <FontAwesomeIcon className={styles.messageGoBackButton} onClick={toggleMessageContainerVisual} icon={faAngleLeft} />
                 <hr />
                 <div className={styles.messageBody}>
-                    <div className={styles.messageFromAndDateContainer}>
-                        <p className={styles.messageFrom}><span>From:</span> {name}</p>
-                        <div className={styles.messageDateAndMenuIconContainer}>
+                    <div className={styles.messageNameAndDateContainer}>
+                        <p className={styles.messageName}><span>From:</span> {name}</p>
+                        <div className={styles.messageDateAndDeleteIconContainer}>
                             <p>{!created ? "" : DateTime.fromISO(created).toFormat('DD')}</p>
-                            <DeleteMessageButton className={styles.messageMenuIcon} id={id} auth={auth} />
+                            <DeleteMessageButton className={styles.deleteMessageButton} id={id} auth={auth} toggleMessageContainerVisual={toggleMessageContainerVisual} />
                         </div>
                     </div>
                     <p className={styles.messageSubject}><span>Subject:</span> {subject}</p>

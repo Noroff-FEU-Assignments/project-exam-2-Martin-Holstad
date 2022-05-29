@@ -1,11 +1,10 @@
 import styles from "./DeleteMessageButton.module.css"
 import { baseUrl } from "../../../../../../settings/BaseUrl";
-import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrash } from "@fortawesome/free-solid-svg-icons"
 
 
-export default function DeleteMessageButton({ id, auth }) {
+export default function DeleteMessageButton({ id, auth, toggleMessageContainerVisual }) {
 
     async function deleteMessage() {
 
@@ -20,8 +19,7 @@ export default function DeleteMessageButton({ id, auth }) {
         try {
 
             const response = await fetch(baseUrl + "/api/contact-messages/" + id, options)
-            const json = await response.json()
-            console.log(json);
+
         } catch (error) {
             console.log(error);
         }
@@ -30,10 +28,11 @@ export default function DeleteMessageButton({ id, auth }) {
 
     function handleDeleteButton() {
 
-        const doDelete = window.confirm("Do you want to delete this message?")
+        const doDelete = window.confirm("Do you want to delete this enquiry message?")
 
         if (doDelete) {
             deleteMessage()
+            toggleMessageContainerVisual()
         }
     }
 

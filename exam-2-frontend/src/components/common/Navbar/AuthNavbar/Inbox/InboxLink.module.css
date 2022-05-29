@@ -1,0 +1,42 @@
+.inboxLink {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.inboxLink:hover {
+    text-decoration: underline;
+}
+
+
+.inboxLink p {
+    margin: 0px;
+    color: var(--secondary-colour);
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.inboxIcon {
+    color: var(--secondary-colour);
+    cursor: pointer;
+}
+
+.newMessagesCount {
+    position: absolute;
+    left: 5px;
+    top: -12px;
+    background-color: #FFEE00;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

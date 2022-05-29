@@ -2,8 +2,8 @@ import styles from "./Navbar.module.css"
 import { NavLink, Link } from "react-router-dom";
 import React, { useState } from "react";
 import useLocalStorage from "../../../hooks/useLocalStorage";
-import ContactForm from "./ContactForm/ContactForm";
-import LoginForm from "./LoginForm/LoginForm";
+import ContactForm from "./ContactForm";
+import LoginForm from "./LoginForm";
 import AuthNavbar from "./AuthNavbar/AuthNavbar";
 
 export function Navbar() {
@@ -13,7 +13,7 @@ export function Navbar() {
     const [loginVisual, setLoginVisual] = useState(false);
 
     function toggleContactModal() {
-        if (contactVisual === false) {
+        if (!contactVisual) {
             setContactVisual(true)
         } else {
             setContactVisual(false)
@@ -21,7 +21,7 @@ export function Navbar() {
     }
 
     function toggleLoginModal() {
-        if (loginVisual === false) {
+        if (!loginVisual) {
             setLoginVisual(true)
         } else {
             setLoginVisual(false)
@@ -42,20 +42,17 @@ export function Navbar() {
                         <li>
                             <p className={styles.loginButton} onClick={toggleLoginModal}>Login</p>
                             <div className={loginVisual ? styles.show : styles.hide}>
-                                <LoginForm />
+                                <LoginForm setLoginVisual={setLoginVisual} />
                             </div>
-                        </li>
-                        <li>
-                            <NavLink to="/accommodations">Accommodations</NavLink>
                         </li>
                         <li>
                             <p className={styles.contactButton} onClick={toggleContactModal}>Contact</p>
                             <div className={contactVisual ? styles.show : styles.hide}>
-                                <ContactForm />
+                                <ContactForm setContactVisual={setContactVisual} />
                             </div>
                         </li>
                         <li>
-                            <NavLink to="/">About</NavLink>
+                            <NavLink to="/about">About</NavLink>
                         </li>
                     </ul>
                 </nav>

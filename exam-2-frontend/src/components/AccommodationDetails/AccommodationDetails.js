@@ -1,8 +1,9 @@
+import styles from "./AccommodationDetails.module.css"
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { baseUrl } from "../../settings/BaseUrl";
 import Details from "./Details/Details";
-import LocationMap from "./LocationMap/LocationMap";
+import LocationMap from "../common/LocationMap/LocationMap";
 import FeaturedAccommodations from "../common/FeaturedAccommodations/FeaturedAccommodations";
 
 export default function AccommodationDetails() {
@@ -49,7 +50,11 @@ export default function AccommodationDetails() {
   return (
     <main>
       <Details accommodation={accommodation} />
-      <LocationMap accommodation={accommodation} />
+      <div className={styles.locationContainer}>
+        <p className={styles.locationHeader}>Location</p>
+        <p className={styles.locationAddress}>Address: {accommodation.attributes.address}</p>
+        <LocationMap />
+      </div>
       <FeaturedAccommodations />
     </main>
   )

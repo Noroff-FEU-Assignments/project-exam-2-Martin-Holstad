@@ -1,0 +1,16 @@
+.locationContainer {
+    max-width: 1030px;
+    margin: 0 auto;
+}
+
+.locationHeader {
+    font-weight: lighter;
+    font-size: 25px;
+    margin: 30px 0px 0px 0px;
+}
+
+.locationAddress {
+    margin: 5px 0px 20px 0px;
+    color: var(--secondary-colour);
+    font-size: 14px;
+}

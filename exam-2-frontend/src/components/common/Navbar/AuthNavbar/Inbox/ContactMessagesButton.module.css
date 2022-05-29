@@ -1,0 +1,40 @@
+.contactButtonContainer {
+    position: relative;
+}
+
+.contactButton {
+    margin: 0px;
+    cursor: pointer;
+}
+
+.contactButtonFocus {
+    font-weight: bold;
+    margin: 0px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.contactButton:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.newContactLength {
+    position: absolute;
+    right: -15px;
+    top: -18px;
+    background-color: #FFEE00;
+    width: 24px;
+    height: 24px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none !important;
+}

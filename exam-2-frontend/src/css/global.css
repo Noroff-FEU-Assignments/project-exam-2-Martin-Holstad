@@ -17,6 +17,15 @@ body {
     font-family: var(--primary-font);
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    flex: 1;
+}
 
 .react-datepicker__input-container input {
     width: 95%;

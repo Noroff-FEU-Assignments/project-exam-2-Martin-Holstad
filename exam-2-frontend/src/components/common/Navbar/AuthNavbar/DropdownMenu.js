@@ -1,5 +1,6 @@
 import styles from "./DropdownMenu.module.css"
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 import useLocalStorage from "../../../../hooks/useLocalStorage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -35,12 +36,14 @@ export default function DropdownMenu() {
             </div>
             <div className={`${styles.dropDownMenu} ${!isMenuOpen ? styles.hide : styles.show}`}>
                 <div className={styles.menuItems}>
-                    <FontAwesomeIcon icon={faPlus} />
-                    <p>Add staying</p>
+                    <Link className={styles.menuLink} to="/admin-panel">
+                        <FontAwesomeIcon className={styles.menuIcons} icon={faPlus} />
+                        <p>Add staying</p>
+                    </Link>
                 </div>
-                <hr />
+                <hr className={styles.hr} />
                 <div className={styles.menuItems} onClick={handleLogout}>
-                    <FontAwesomeIcon icon={faArrowRightFromBracket} />
+                    <FontAwesomeIcon className={styles.menuIcons} icon={faArrowRightFromBracket} />
                     <p>Logout</p>
                 </div>
             </div>

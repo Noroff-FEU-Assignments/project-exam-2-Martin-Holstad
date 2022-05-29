@@ -1,0 +1,44 @@
+.popularFiltersHeader {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popularFilterCheckboxContainer {
+    margin-top: 10px;
+}
+
+
+.popularFilterCheckboxContainer input {
+    margin: 0px 5px 0px 0px;
+    outline: none;
+}
+
+
+.popularFilterBedsContainer {
+    margin-top: 10px;
+}
+
+.popularFilterBedsContainer label {
+    font-size: 14px;
+}
+
+.popularFilterBedsContainer input {
+    margin-top: 5px;
+    height: 30px;
+    outline: none;
+}
+
+.popularFilterGuestsContainer {
+    margin-top: 10px;
+}
+
+.popularFilterGuestsContainer label {
+    font-size: 14px;
+}
+
+
+.popularFilterGuestsContainer input {
+    margin-top: 5px;
+    height: 30px;
+    outline: none;
+}

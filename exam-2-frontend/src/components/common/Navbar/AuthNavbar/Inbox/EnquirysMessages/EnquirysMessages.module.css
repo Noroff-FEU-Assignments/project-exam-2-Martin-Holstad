@@ -1,0 +1,163 @@
+.ulContainer {
+    padding: 15px 20px 15px 20px !important;
+    margin-bottom: 5px;
+    display: block !important;
+    border: 1px solid gray;
+    cursor: pointer;
+    margin: 5px 5px 0px 5px;
+}
+
+.loaderContainer {
+    display: grid;
+    justify-content: center;
+    padding: 170px;
+}
+
+
+.newEnquiryUlContainer {
+    padding: 15px 20px 15px 20px !important;
+    margin-bottom: 5px;
+    display: block !important;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 5px 5px 5px 5px;
+    background: linear-gradient(90deg, var(--primary-colour) 2%, #ffff 2%);
+}
+
+.li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    pointer-events: none;
+}
+
+.from {
+    color: var(--secondary-colour);
+}
+
+.from span {
+    margin-left: 5px;
+    color: black;
+}
+
+.reservationFor {
+    color: var(--secondary-colour);
+}
+
+.reservationFor span {
+    margin-left: 5px;
+    color: black;
+}
+
+.enquiryContainer {
+    height: 600px;
+}
+
+.enquiryGoBackButton {
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0px 0px 0px 10px;
+    padding: 7px 0px 0px 0px;
+}
+
+.enquiryBody {
+    padding: 0px 10px 0px 10px;
+}
+
+.enquiryNameAndDateContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.enquiryName {
+    color: var(--secondary-colour);
+}
+
+.enquiryName span {
+    font-weight: bold;
+    color: black;
+}
+
+.enquiryDateAndDeleteIconContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.enquiryEmail {
+    color: var(--secondary-colour);
+}
+
+.enquiryEmail span {
+    font-weight: bold;
+    color: black;
+}
+
+.enquiryPhone {
+    color: var(--secondary-colour);
+}
+
+.enquiryPhone span {
+    font-weight: bold;
+    color: black;
+}
+
+.enquiryReservationFor {
+    color: var(--secondary-colour);
+    margin-top: 60px;
+}
+
+.enquiryReservationFor span {
+    font-weight: bold;
+    color: black;
+}
+
+.enquiryRoomName {
+    color: var(--secondary-colour);
+}
+
+.enquiryRoomName span {
+    font-weight: bold;
+    color: black;
+}
+
+.enquiryDates {
+    color: var(--secondary-colour);
+}
+
+.enquiryDates span {
+    font-weight: bold;
+    color: black;
+}
+
+.enquiryGuests {
+    color: var(--secondary-colour);
+}
+
+.enquiryGuests span {
+    font-weight: bold;
+    color: black;
+}
+
+.date {
+    text-align: end;
+}
+
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media only screen and (max-width: 631px) {
+
+    .li {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .reservationFor {
+        display: none;
+    }
+
+}

@@ -1,65 +1,40 @@
+import styles from "./FilterMenu.module.css"
+import { useState } from "react";
+import SearchByName from "./SearchByName";
+import PopularFilter from "./PopularFilter";
+import Rating from "./Rating";
+import TypeOfStaying from "./TypeOfStaying";
+import Price from "./Price";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXmark, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 
-/*
 
-  const [searchNameValue, setSearchNameValue] = useState("");
-  const [hotelCheckbox, setHotelCheckbox] = useState("");
-  const [bAndBCheckbox, setBAndBCheckbox] = useState("");
-  const [guestHousesCheckbox, setGuestHousesCheckbox] = useState("");
+export default function FilterMenu({ setFilterMenuVisual, setSearchNameValue, setBathroomIncluded, setkitchenIncluded, setBedsIncluded, setNumberofGuests, setTypeOfStayingValue, setPriceValue, setRatingValue }) {
 
-  console.log(hotelCheckbox);
-  console.log(bAndBCheckbox);
-  console.log(guestHousesCheckbox);
 
-  function handleSearchName(event) {
-
-    setSearchNameValue(event.target.value.toLowerCase())
-    console.log(searchNameValue);
-  }
-
-  function handleHotelCheck(event) {
-
-    setHotelCheckbox("Hotel")
-
-    if (event.target.checked === false) {
-      setHotelCheckbox("")
+    function handleFilterButton() {
+        setFilterMenuVisual(false)
     }
-  }
 
-  function handleBAndBCheck(event) {
-    setBAndBCheckbox("Bed_and_breakfast")
+    return (
 
-    if (event.target.checked === false) {
-      setBAndBCheckbox("")
-    }
-  }
+        <div className={styles.filterMenuBackGroundColour}>
+            <div className={styles.filterMenuContainer}>
+                <div className={styles.closeMenuArrowButtonContainer}>
+                    <FontAwesomeIcon className={styles.closeMenuArrowButton} icon={faChevronLeft} onClick={handleFilterButton} />
+                </div>
+                <SearchByName setSearchNameValue={setSearchNameValue} />
+                <hr className={styles.hr} />
+                <PopularFilter setBathroomIncluded={setBathroomIncluded} setkitchenIncluded={setkitchenIncluded} setBedsIncluded={setBedsIncluded} setNumberofGuests={setNumberofGuests} />
+                <hr className={styles.hr} />
+                <TypeOfStaying setTypeOfStayingValue={setTypeOfStayingValue} />
+                <hr className={styles.hr} />
+                <Price setPriceValue={setPriceValue} />
+                <hr className={styles.hr} />
+                <Rating setRatingValue={setRatingValue} />
+            </div>
 
-  function handleGuestHousesCheck(event) {
-    setGuestHousesCheckbox("Guest_house")
-
-    if (event.target.checked === false) {
-      setGuestHousesCheckbox("")
-    }
-  }
-
-
-
-<div className={styles.filterNameConatiner}>
-<label htmlFor="search-name">Search by name</label>
-<input onChange={handleSearchName} id="search-name" type="text" placeholder="Search" />
-</div>
-
-<div>
-<p>Type of staying</p>
-<div>
-  <input onChange={handleHotelCheck} id="hotel" type="checkbox" />
-  <label htmlFor="hotel">Hotel</label>
-</div>
-<div>
-  <input onChange={handleBAndBCheck} id="b&bs" type="checkbox" />
-  <label htmlFor="b&s">B&Bs</label>
-</div>
-<div>
-  <input onChange={handleGuestHousesCheck} id="guesthouses" type="checkbox" />
-  <label htmlFor="guesthouses">Guesthouses</label>
-</div>
-</div>*/
+            <FontAwesomeIcon className={styles.closeMenuCrossButton} icon={faXmark} onClick={handleFilterButton} />
+        </div>
+    )
+}

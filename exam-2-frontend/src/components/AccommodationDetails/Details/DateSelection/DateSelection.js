@@ -12,8 +12,16 @@ export default function DateSelection({ accommodation }) {
     defaultCheckoutDate.setDate(defaultCheckoutDate.getDate() + 1);
 
     const [guestsAmount, setGuestsAmount] = useState(0);
-    const [dateRange, setDateRange] = useState([new Date(), defaultCheckoutDate]);
+    const [dateRange, setDateRange] = useState([new Date(), new Date(defaultCheckoutDate)]);
     const [startDate, endDate] = dateRange;
+
+    const checkin = new Date(startDate)
+    const checkOut = new Date(endDate)
+
+    if (checkin.getDate() === checkOut.getDate()) {
+        alert("Need to pick atleast one day")
+        setDateRange([new Date(), new Date(defaultCheckoutDate)])
+    }
 
     const time_difference = endDate - startDate;
 

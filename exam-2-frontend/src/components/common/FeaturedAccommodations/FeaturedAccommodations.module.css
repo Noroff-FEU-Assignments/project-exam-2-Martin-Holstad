@@ -4,6 +4,13 @@
   padding: 10px;
 }
 
+.loaderContainer {
+  display: grid;
+  justify-content: center;
+  padding: 160px;
+}
+
+
 .featuredAccommodationsHeader {
   font-weight: lighter;
   white-space: wrap;
@@ -28,6 +35,8 @@
 
 .cardImg {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .cardBody {
@@ -62,6 +71,7 @@
 
 .cardPrice {
   margin-bottom: 0px;
+  color: black;
 }
 
 @media only screen and (max-width: 1040px) {

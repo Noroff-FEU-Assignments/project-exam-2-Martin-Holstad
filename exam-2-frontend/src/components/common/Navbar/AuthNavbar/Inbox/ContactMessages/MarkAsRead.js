@@ -14,7 +14,6 @@ export default async function MarkAsRead(id, auth) {
     try {
 
         const response = await fetch(baseUrl + "/api/contact-messages/" + id, options)
-        const json = await response.json()
 
     } catch (error) {
         console.log(error);
