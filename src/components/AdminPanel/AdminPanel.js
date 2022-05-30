@@ -40,15 +40,15 @@ export default function AdminPanel() {
 
     async function onSubmit(data) {
 
-        if (mainImage === false) {
+
+        if (!mainImage) {
             return alert("Need to add images");
         }
 
-        if (images === false) {
+        if (images.length === 0 || images === false) {
             return alert("Need to add images");
         }
 
-        console.log(data);
         setLoading(true)
         const url = baseUrl + "/api/hotels?populate=*"
 
