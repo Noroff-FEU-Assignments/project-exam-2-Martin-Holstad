@@ -32,7 +32,7 @@ Holidaze is an "hotel, bed & breakfast and guesthouse agency" in Bergen who give
 1. Clone the repo:
 
 ```bash
-git clone git@github.com/Noroff-FEU-Assignments/js-frameworks-course-assignment-Martin-Holstad
+git clone git@github.com/Noroff-FEU-Assignments/project-exam-2-Martin-Holstad
 ```
 
 2. Install the dependencies:
