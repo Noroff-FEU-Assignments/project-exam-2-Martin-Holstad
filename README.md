@@ -10,7 +10,7 @@ Password: Pass1234
 
 ## Description
 
-Holidaze is an "hotel, bed & breakfast and guesthouse agency" in Bergen who gives the user opportunity to ask for reservaton for different accommodations. On the admin side there is a inbox with all the enquiries / contact messages that are sendt in from the useres. Admins have the opportunity to add new accommodations to the site through the admin panel on the frontend.
+Holidaze is an "hotel, bed & breakfast and guesthouse agency" in Bergen who gives the user opportunity to ask for reservaton for different accommodations. On the admin side there is a inbox with all the enquiries / contact messages that are sendt in from the users. Admins have the opportunity to add new accommodations to the site through the admin panel on the frontend.
 
 ## Built With
 
