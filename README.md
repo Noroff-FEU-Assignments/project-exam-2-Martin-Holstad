@@ -8,7 +8,7 @@ Password: Pass1234
 
 # Holidaze
 
-![image](https://user-images.githubusercontent.com/71444698/173183579-c49da97d-7462-4839-9055-b64610396a14.png)
+![image](https://user-images.githubusercontent.com/71444698/173192826-ede09be3-ccc2-4d17-b5df-b49699ca98fc.png)
 
 ## Description
 
