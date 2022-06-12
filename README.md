@@ -8,7 +8,7 @@ Password: Pass1234
 
 ![image](https://user-images.githubusercontent.com/71444698/173192826-ede09be3-ccc2-4d17-b5df-b49699ca98fc.png)
 
-
+[Link to Holidaze](https://frolicking-blini-82442a.netlify.app/)
 
 ## Description
 
