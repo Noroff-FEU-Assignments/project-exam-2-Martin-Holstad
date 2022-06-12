@@ -8,11 +8,11 @@ Password: Pass1234
 
 ![image](https://user-images.githubusercontent.com/71444698/173192826-ede09be3-ccc2-4d17-b5df-b49699ca98fc.png)
 
-[Link to Holidaze](https://frolicking-blini-82442a.netlify.app/)
-
 ## Description
 
 Holidaze is an "hotel, bed & breakfast and guesthouse agency" in Bergen who gives the user opportunity to ask for reservaton for different accommodations. On the admin side there is a inbox with all the enquiries / contact messages that are sendt in from the users. Admins have the opportunity to add new accommodations to the site through the admin panel on the frontend.
+
+[Link to Holidaze](https://frolicking-blini-82442a.netlify.app/)
 
 ## Built With
 
